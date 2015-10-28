@@ -1,0 +1,429 @@
+<!doctype html>
+<html>
+<head>
+  <!--FIREBASE -->
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <!-- JQUERY -->    
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+
+  <!-- BOOTSTRAP -->
+  <!-- links to include BOOTSTRAP to your project-->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap-modal.min.js"></script>
+  <!--Fontawesome info -->  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!--CSS -->
+  <link rel='stylesheet' type='text/css' href='css/style.css'>
+    
+</head>
+ 
+<body>
+  <NAV>
+    <a href="English">English</a>
+    <a href="http://learngaelic.scot/dictionary/index.jsp?abairt=Type%20here&slang=both&wholeword=false" target='_blank'>Faclair</a>
+    <a href="Cuideachas">Cuideachas</a>
+    <a href="Neach-aithne">Neach-aithne</a>
+  </NAV>
+
+<!-- <section class="English">
+  <h1>Cabadaich - The Chat for Gaels</h1>
+  <h2>For Beginners</h2>
+  <p>Cabadaich means to chat, and now Gaels the world over have a place to chat in Gaelic without all the interference of English prevalent in many social networking sites.  If you are a beginner, it may seem daunting to chat in Gaelic because you are worried that your spelling and grammar are not good enough.  Have no fear, you are in the Gaelic community and there are lots of other Gaels ready to help.</p>
+  <p>Please check out the handy tools to help you get better at writing and reading - ie chatting - in Gaelic.  There is the Facal-faire or dictionary that will link you right to the LearnGaelic.net dictionary, and the Cuideachas section provides some handy sayings that are common for quick retorts.</p>
+  
+  <h2>For Intermediates</h2>
+  <p>You feel quite comfortable in speaking conversational Gaelic and you are getting better in the reading and writing departments, but you still need to add the blas!  Use the Gramar section for discussions about all things grammar-like because seriously, understanding the conjugation of verbs in genative case is not as exciting to everyone as the ceilidh in Glencoe on Friday night.  Let's keep our priorities aligned.</p>
+  
+  <h2>For Advanced</h2>
+  <p>You are a resource for the learners and intermediates, but you also have lots to add to your language and cultural expression toolkit.  Consider adding some original Gaelic poetry or song to the channels for Song and Music or Stories and Poetry.  Have fun.</p>
+</section>
+<section class="Cuideachas">
+  <p> &#9830 Cuimseach math (Pretty good)</p>
+  <p> &#9830 droch-naidheachd (bad news)</p>
+  <p> &#9830 c&#242il &#242s &#249r? (anything new?)</p>
+  <p> &#9830 's math do naidheachd (you’ve got good news)</p>
+</section>
+<section class="Neach-aithne">
+  <a href="mailto:gaelicapptesters@gmail.com">gaelicapptesters@gmail.com</a>
+</section> -->
+
+
+  <div class-"container">
+    <div class="jumbotron">
+
+      <!-- <h1> f&#224ilte gu</h1>    
+      <h1> Cabadaich</h1> -->
+          <a href="#" data-toggle="tooltip" data-placement="right" title="Welcome to Gaelic Chat!"><font color="#EEFCFC">f&#224ilte gu</font></br> <font color="#09347C">Cabadaich</font></a>
+          <!-- <p><a id="login" class="btn btn-primary btn-lg " href="#" role="button">cl&#224raich a-steach</a>
+          <a id="logout" button type="button" class="btn btn-warning" onclick=logout()>cl&#224raich a-mach</button>
+        </a>
+      </p> -->
+    </div>
+  </div>
+
+  <!-- This is the combined login box attempt -->
+
+  <div id="mainDisplay">
+    <div class="row" id="mainDisplayLogin">
+      <div class="col-xs-5 col-xs-offset-4">
+        <div class="LoginOptionWindow">
+          <h3 class="LoginFormHeader">How Would You Like to Login? </h3>
+          <div class="row">
+            <div class="col-xs-4">
+                <a id="facebook-signin" href="javascript:login('facebook');">
+                  <i id="facebook-signin-btn" class="fa fa-facebook-square fa-5x"></i>
+                  <p>Facebook</p>
+                </a>
+            </div>
+
+            <div class="col-xs-4">
+              <a id="twitter-signin" href="javascript:login('twitter');">
+                <i id="twitter-signin-btn" class="fa fa-twitter-square fa-5x"></i>
+                <p>Truitrich /Twitter</p>
+              </a>
+            </div>
+
+            <div class="col-xs-4">
+              <a id="email-sign-in">
+                <i id="email-signin-btn" class="fa fa-envelope-o fa-5x"></i>
+                <p>email</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="LoginEmailWindow" style="display: none;">
+          <div class="form-group">
+            <label class="name" for="user_password">Name</label>
+            <input class="form-control" id="user_name" name="user[name]" placeholder="Enter Name" type="text">
+          </div>
+
+          <div class="form-group">
+            <div class="row"> 
+              <p>Or, Use your email &amp; password</p>
+            <label class="email optional control-label" for="user_email">Email</label>
+            <input autofocus="autofocus" class="string email optional form-control" id="user_email" name="user[email]" placeholder="Enter email" type="email" value="">
+          </div>
+        </div>
+
+          <div class="form-group">
+            <label class="password optional control-label" for="user_password">Password</label>
+            <input class="form-control" id="user_password" name="user[password]" placeholder="Enter password" type="password">
+          </div>
+        
+          <input class="btn btn btn-success" name="commit" type="button" id="login-button" value="Sign in">
+          <button class="RegisterButton" type="button" id="LoginRegisterButton">Register</button>
+          <button class="RegisterButton" type="button" id="LoginCancel">Cancel</button>
+        </div>
+      </div>
+
+      <div class="main-chat-register" style="display: none;">
+        <div class="container">
+          <h1 class="RegisterHeader">Cl&#224radh:</h1>
+
+          <div class="row">
+            <div class="col-sm-12">
+                <input type="text" class="btn-celticCustom" id="register-name" value="" placeholder="Ainm" />
+            </div>
+            <div class="col-sm-12">
+                <input type="text" class="btn-celticCustom" id="register-email" value="" placeholder="Post-dealain" />
+            </div>
+            <div class="col-sm-12">
+              <input type="text" class="btn-celticCustom" id="register-password" value="" placeholder="Facal-faire" />
+            </div>
+            <div class="col-sm-12">
+              <label id="PhotoUploadLabel"><i class="fa fa-picture-o"></i>Add Your Image by Selecting the button below:</label>
+              <input id="PhotoUpload" type="file"/>
+            </div>
+            <div class="col-sm-12">
+              <button type="button" class="btn-celticCustom2" id="register-button">Register</button>
+            </div>
+            <div class="col-sm-12">
+              <button type="button" class="btn-celticCustom3" id="login-window-button">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+
+    <div class="main-chat-display">
+    <h1><img src="" id="displayphoto" style="height: 40px; width: 40px;" /> <span id="displayname"></span></h1>
+      <div class="row">
+        
+     </div>
+   </div>
+
+    <div class="row" id="mainDisplayMessages" style="display:none;">
+      <img src="" id="displayphoto" style="height: 40px; width: 40px;" /> <span id="displayname"></span>
+      <div class="col-xs-8">
+        <div class="row">
+            <div class="col-xs-4 visit">
+          <p>Modh Conaltraidh</p>
+            <button type="button" class="btn-channel" onclick="channel('News')">Naidheachd</button>
+            <button type="button" class="btn-channel" onclick="channel('Music & Song')">Ce&#242l & &#210ranach</button>
+            <button type="button" class="btn-channel" onclick="channel('Stories & Poetry')">Sgeul & D&#224nachd</button>
+            <button type="button" class="btn-channel" onclick="channel('Polish & Grammar')">Snasadh & Gr&#224mar</button>
+            <button type="button" class="btn-channel" onclick="channel('Projects')">Pr&#242iseactean &#217r</button>
+            <button type="button" class="btn-channel" onclick="channel('Stay & Work')">Fuirich & Oibrich</button>
+        </div>
+
+          <div class="col-xs-8">
+
+
+            <div id='messagesDiv' class="messages"></div>
+            <input type='text' id='messageInput' class="InputBox" placeholder='teachdaireachd'>  
+            <!-- <a href="#" data-toggle="tooltip" title="Write a message here!">teachdaireachd'</a> -->
+          </div>
+        </div>
+          
+      </div>
+      <div><a href="javascript:logout();">Logout</a></div>
+    </div>
+  </div> 
+
+   
+<!-- End of Login Screen Options -->
+
+  
+
+  <div class="main-chat-display">
+    <h1><img src="" id="displayphoto" style="height: 40px; width: 40px;" /> <span id="displayname"></span></h1>
+      <div class="row">
+        <div class="col-xs-4 visit">
+          <p>Modh Conaltraidh</p>
+            <button type="button" class="btn btn-warning btn-channel" onclick="channel('News')">Naidheachd</button>
+            <button type="button" class="btn-channel" onclick="channel('Music & Song')">Ce&#242l & &#210ranach</button>
+            <button type="button" class="btn-channel" onclick="channel('Stories & Poetry')">Sgeul & D&#224nachd</button>
+            <button type="button" class="btn-channel" onclick="channel('Polish & Grammar')">Snasadh & Gr&#224mar</button>
+            <button type="button" class="btn-channel" onclick="channel('Projects')">Pr&#242iseactean &#217r</button>
+            <button type="button" class="btn-channel" onclick="channel('Stay & Work')">Fuirich & Oibrich</button>
+        </div>
+     
+
+      
+
+
+      <!-- <div class="container">
+        <h3>Tooltip Example</h3>
+          <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
+      </div> -->
+
+      <!-- <div class= "container-fluid">
+        <div class="row">
+          <div class="col-xs-4 visit">
+            <p>Modh Conaltraidh</p>
+          </div>
+        </div>
+      </div> -->
+        
+        <div class="col-xs-8">
+        <!-- <div class="row">
+        <div class="col-xs-10"> -->
+          <div id='messagesDiv' class="messages"></div>
+          <a href="#" data-toggle="tooltip" title="Write a message here!">teachdaireachd'</a>
+        </div>
+        <input type='text' id='messageInput' class="InputBox" placeholder='teachdaireachd'>    
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      var myDataRef = new Firebase('https://ultimatevacation.firebaseio.com/');
+      var string = $("#robstring").html();
+      var name= "";
+      var authModal = $('#auth-modal').modal( {show: false}); //this cluase hides the modal unless
+      var curchannel= "News";
+      //the user tries to enter a message without being logged in//
+      //check to see if the user is logged in using getAuth fx
+      // Create a callback which logs the current auth state
+      var authData = myDataRef.getAuth();
+      if (authData) {
+        // alert("User " + authData.uid + " is logged in with " + authData.provider);
+        console.log("User " + authData.uid + " is logged in with " + authData.provider);
+        //@TODO: get logged user name
+        if (authData.provider == "password"){
+          myDataRef.child('user').child(authData.uid).once('value', function(snapshot){
+            var userinfo=snapshot.val();
+            for (key in userinfo) {
+              name = userinfo[key].name;
+              $("#mainDisplayLogin").hide();
+              $("#mainDisplayMessages").show();
+            }
+          });
+        }
+        else{
+          name = authData[authData.provider].displayName;
+          $("#mainDisplayLogin").hide();
+          $("#mainDisplayMessages").show();
+        }
+      } else {
+        console.log("User is logged out");
+      }
+      $(document).ready(function() {
+        $("#email-sign-in").click(function(){
+          $(".LoginOptionWindow").hide();
+          $(".LoginEmailWindow").show();  
+        });
+        $("#LoginCancel").click(function(){
+          $(".LoginEmailWindow").hide();  
+          $(".LoginOptionWindow").show();
+        });
+        $("#LoginRegisterButton").click(function() {
+          $(".LoginEmailWindow").hide();
+          $(".main-chat-register").show();
+        });
+        $("#login-window-button").click(function() {
+          $(".main-chat-register").hide();
+          $(".LoginEmailWindow").show();
+        });
+        $("#register-button").click(function() {
+          var registerName = $("#register-name").val();
+          var email = $("#register-email").val();
+          var password = $("#register-password").val();
+          myDataRef.createUser({
+            email    : email,
+            password : password
+          }, function(error, userData) {
+            if (error) {
+              console.log("Error creating user:", error);
+            } else {
+              console.log("Successfully created user account with uid:", userData.uid);
+              var photoinput = document.getElementById('PhotoUpload');
+              var f = photoinput.files[0];
+              var reader = new FileReader();
+              reader.onload = (function(theFile) {
+                return function(e) {
+                  var filePayload = e.target.result;
+                  // Generate a location that can't be guessed using the file's contents and a random number
+                  //var hash = CryptoJS.SHA256(Math.random() + CryptoJS.SHA256(filePayload));
+                  var firebasephoto = new Firebase(myDataRef + '/photos/' + userData.uid + '/filePayload');
+                  // Set the file payload to Firebase and register an onComplete handler to stop the spinner and show the preview
+                  //firebasephoto.set(filePayload, function() { 
+                  myDataRef.child('user').child(userData.uid).push({id:userData.uid, email:email, name:registerName, photo:e.target.result}); 
+                  myDataRef.authWithPassword({
+                    email    : email,
+                    password : password
+                  }, function(error, authData) {
+                    if (error) {
+                      console.log("Login Failed!", error);
+                    } else {
+                      console.log("Authenticated successfully with payload:", authData);
+                      name=registerName;
+                      $("#mainDisplayLogin").hide();
+                      $("#mainDisplayMessages").show();
+                    }
+                  });
+                };
+              })(f);
+        
+              reader.readAsDataURL(f);
+            }
+          });
+        });
+        $("#login-button").click(function() {
+          var email = $("#user_email").val();
+          var password = $("#user_password").val();
+          myDataRef.authWithPassword({
+            email    : email,
+            password : password
+          }, function(error, authData) {
+            if (error) {
+              console.log("Login Failed!", error);
+            } else {
+              console.log("Authenticated successfully with payload:", authData);
+              // console.log (authData.uid);
+              myDataRef.child('user').child(authData.uid).once("value", function(snapshot) {
+                var user = snapshot.val();
+                console.log('The users info', user);
+                for (var key in user) {
+                  console.log('the users id is?', user[key]);
+                  name=user[key].name;
+                  $("#displayname").html(user[key].name);
+                  document.getElementById("displayphoto").src = user[key].photo;
+                } 
+              });            
+              $("#mainDisplayLogin").hide();
+              $("#mainDisplayMessages").show();
+            }
+          });
+        });
+        $('#messageInput').keypress(function (e) {
+          if (e.keyCode == 13) {
+            // alert(name);
+            //check here to see if user is logged in
+            if(!name){
+              console.log('error place');
+              //authModal.modal('show');
+            } else { //don't allow submit unless there is a name!
+              //var name = $('#nameInput').val();
+              var text = $('#messageInput').val();
+              myDataRef.child('messages').child(curchannel).push({name: name, text: text});
+              $('#messageInput').val('');
+            }
+          }
+        });
+        myDataRef.child('messages').child(curchannel).on('child_added', function(snapshot) {
+          var message = snapshot.val();
+          displayChatMessage(message.name, message.text);
+        });
+      });
+      function channel(TheChannel) {
+        curchannel = TheChannel;
+        $('#messagesDiv').html('');
+        myDataRef.child('messages').child(curchannel).off('child_added');
+        myDataRef.child('messages').child(curchannel).on('child_added', function(snapshot) {
+          var message = snapshot.val();
+          displayChatMessage(message.name, message.text);
+        });
+      }
+      function logout() {
+        console.log("logging out");
+        myDataRef.unauth();
+        location.reload();
+      }
+      function login(provider) {
+        console.log("login with ", provider);
+        authModal.modal('hide');
+        myDataRef.authWithOAuthPopup(provider, function(error, authData) {
+          if (error) {
+            console.log("Login Failed!", error);
+          } else {
+            console.log("Authenticated successfully with payload:", authData);
+            //console.log(authData.provider.cachedUserProfile.picture.data.url);
+            //console.log("User " + authData.uid + " is logged in with " + authData.provider);
+            var userId = authData.uid;
+            name = authData[authData.provider].displayName;
+            myDataRef.child('user').child(userId).once("value", function(snapshot) {
+              data = snapshot.val();
+              console.log(data);
+              var ifExists = snapshot.exists(); //a firebase function
+              if (ifExists){
+                console.log ('user is already in the system');
+              } else{
+                myDataRef.child('user').child(userId).push({id: userId, name:name}); 
+              }
+              $("#mainDisplayLogin").hide();
+              $("#mainDisplayMessages").show();
+            });
+          }
+        });
+      }
+      function displayChatMessage(name, text) {
+        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+      } 
+    </script>
+  </body>
+</html>
