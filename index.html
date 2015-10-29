@@ -26,380 +26,121 @@
 
   <div class="container">
   <div class="row head" style="background: #f0f;min-height: 300px;">
-    <p>
-      <p>
       </div>
     <div class="col-sm-2 left">
     </div>
     <div class="col-sm-8 questions">
       <div class="form-group">
-            <label class="name" for="user_password">First Name</label>
+            <label class="name">First Name</label>
             <input class="form-control" id="user_name" name="user[name]" placeholder="Enter First Name" type="text">
           </div>
 
-          <div class="form-group">
-            <label class="email optional control-label" for="user_email">Email</label>
-            <input autofocus="autofocus" class="string email optional form-control" id="user_email" name="user[email]" placeholder="Enter email" type="email" value="">
-          </div>
-          <div class="form-group">
-            <label class="password optional control-label" for="user_password">Password</label>
-            <input class="form-control" id="user_password" name="user[password]" placeholder="Enter password" type="password">
+      <div class="form-group">
+            <label class="work">Place of Work</label>
+            <input class="form-control" id="user_work" name="user[work]" placeholder="Enter Place of Work" type="text">
           </div>
 
           <div class="form-group">
-            <label class="name" for="user_password">First Name</label>
-            <input class="form-control" id="user_name" name="user[name]" placeholder="Enter First Name" type="text">
+            <label class="phone">Place of Work</label>
+            <input class="form-control" id="user_phone" name="user[phone]" placeholder="Enter Phone Number" type="text">
           </div>
 
-          <div class="form-group">
-            <label class="email optional control-label" for="user_email">Email</label>
-            <input autofocus="autofocus" class="string email optional form-control" id="user_email" name="user[email]" placeholder="Enter email" type="email" value="">
-          </div>
-          <div class="form-group">
-            <label class="password optional control-label" for="user_password">Password</label>
-            <input class="form-control" id="user_password" name="user[password]" placeholder="Enter password" type="password">
-          </div>
-          <button type="button" class="btn btn btn-generate" id="generateScript">Click for Options</button>
+          <button class="Generate">Try it</button>
     </div>
      <div class="col-sm-2 right">
     </div>
-  </div>
-  </div>
-
   
-  
+    
 
-           
-
-
-        <!-- <div class="LoginEmailWindow" style="display: none;"> -->
-          <!-- <div class="form-group">
-            <label class="name" for="user_password">Name</label>
-            <input class="form-control" id="user_name" name="user[name]" placeholder="Enter Name" type="text">
-          </div>
-
-          <div class="form-group">
-            <div class="row"> 
-              <p>Or, Use your email &amp; password</p>
-            <label class="email optional control-label" for="user_email">Email</label>
-            <input autofocus="autofocus" class="string email optional form-control" id="user_email" name="user[email]" placeholder="Enter email" type="email" value="">
-          </div> -->
-        <!-- </div>
-
-          <div class="form-group">
-            <label class="password optional control-label" for="user_password">Password</label>
-            <input class="form-control" id="user_password" name="user[password]" placeholder="Enter password" type="password">
-          </div> -->
-        <!-- 
-          <input class="btn btn btn-success" name="commit" type="button" id="login-button" value="Sign in">
-          <button class="RegisterButton" type="button" id="LoginRegisterButton">Register</button>
-          <button class="RegisterButton" type="button" id="LoginCancel">Cancel</button>
-        </div>
-      </div>
-
-      <div class="main-chat-register" style="display: none;">
-        <div class="container">
-          <h1 class="RegisterHeader">Cl&#224radh:</h1>
-
-          <div class="row">
-            <div class="col-sm-12">
-                <input type="text" class="btn-celticCustom" id="register-name" value="" placeholder="Ainm" />
-            </div>
-            <div class="col-sm-12">
-                <input type="text" class="btn-celticCustom" id="register-email" value="" placeholder="Post-dealain" />
-            </div>
-            <div class="col-sm-12">
-              <input type="text" class="btn-celticCustom" id="register-password" value="" placeholder="Facal-faire" />
-            </div>
-            <div class="col-sm-12">
-              <label id="PhotoUploadLabel"><i class="fa fa-picture-o"></i>Add Your Image by Selecting the button below:</label>
-              <input id="PhotoUpload" type="file"/>
-            </div>
-            <div class="col-sm-12">
-              <button type="button" class="btn-celticCustom2" id="register-button">Register</button>
-            </div>
-            <div class="col-sm-12">
-              <button type="button" class="btn-celticCustom3" id="login-window-button">Login</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>   -->
-
-    <div class="main-chat-display">
-    <h1><img src="" id="displayphoto" style="height: 40px; width: 40px;" /> <span id="displayname"></span></h1>
-      <div class="row">
-        
-     </div>
-   </div>
-
-    <div class="row" id="mainDisplayMessages" style="display:none;">
-      <img src="" id="displayphoto" style="height: 40px; width: 40px;" /> <span id="displayname"></span>
-      <div class="col-xs-8">
-        <div class="row">
-            <div class="col-xs-4 visit">
-          <p>Modh Conaltraidh</p>
-            <button type="button" class="btn-channel" onclick="channel('News')">Naidheachd</button>
-            <button type="button" class="btn-channel" onclick="channel('Music & Song')">Ce&#242l & &#210ranach</button>
-            <button type="button" class="btn-channel" onclick="channel('Stories & Poetry')">Sgeul & D&#224nachd</button>
-            <button type="button" class="btn-channel" onclick="channel('Polish & Grammar')">Snasadh & Gr&#224mar</button>
-            <button type="button" class="btn-channel" onclick="channel('Projects')">Pr&#242iseactean &#217r</button>
-            <button type="button" class="btn-channel" onclick="channel('Stay & Work')">Fuirich & Oibrich</button>
-        </div>
-
-          <div class="col-xs-8">
-
-
-            <div id='messagesDiv' class="messages"></div>
-            <input type='text' id='messageInput' class="InputBox" placeholder='teachdaireachd'>  
-            <!-- <a href="#" data-toggle="tooltip" title="Write a message here!">teachdaireachd'</a> -->
-          </div>
-        </div>
-          
-      </div>
-      <div><a href="javascript:logout();">Logout</a></div>
-    </div>
-  </div> 
-
+<!-- this will be the div that will show the compiled messages -->
    
-<!-- End of Login Screen Options -->
+    <div class="row" id="mainDisplayMessages">
 
-  
+    
+      <div class="col-sm-12 messages">
+        <button id="tierOneName" class="tierOneName" onclick="send('tierOneName')">Hey <span class='button-name'>NAME</span>, I know how creepy you've been being to my friend.</button> 
 
-  <div class="main-chat-display">
-    <h1><img src="" id="displayphoto" style="height: 40px; width: 40px;" /> <span id="displayname"></span></h1>
-      <div class="row">
-        <div class="col-xs-4 visit">
-          <p>Modh Conaltraidh</p>
-            <button type="button" class="btn btn-warning btn-channel" onclick="channel('News')">Naidheachd</button>
-            <button type="button" class="btn-channel" onclick="channel('Music & Song')">Ce&#242l & &#210ranach</button>
-            <button type="button" class="btn-channel" onclick="channel('Stories & Poetry')">Sgeul & D&#224nachd</button>
-            <button type="button" class="btn-channel" onclick="channel('Polish & Grammar')">Snasadh & Gr&#224mar</button>
-            <button type="button" class="btn-channel" onclick="channel('Projects')">Pr&#242iseactean &#217r</button>
-            <button type="button" class="btn-channel" onclick="channel('Stay & Work')">Fuirich & Oibrich</button>
-        </div>
-     
+        <button id="optionTwo" onclick="send('optionTwo')">Hey <span class='button-name'>NAME</span>, I know how creepy you've been being to my friend.</p> 
+        <p id="tierWork" class="tierWork">I am going to come find you at <span class='button-work'>WORK</span>.</p></button>
 
-      
-
-
-      <!-- <div class="container">
-        <h3>Tooltip Example</h3>
-          <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
-      </div> -->
-
-      <!-- <div class= "container-fluid">
-        <div class="row">
-          <div class="col-xs-4 visit">
-            <p>Modh Conaltraidh</p>
-          </div>
-        </div>
-      </div> -->
-        
-        <div class="col-xs-8">
-        <!-- <div class="row">
-        <div class="col-xs-10"> -->
-          <div id='messagesDiv' class="messages"></div>
-          <a href="#" data-toggle="tooltip" title="Write a message here!">teachdaireachd'</a>
-        </div>
-        <input type='text' id='messageInput' class="InputBox" placeholder='teachdaireachd'>    
+        <p id="tierOneThree">Hey <span class='button-name'>NAME</span>, I know how creepy you've been being to my friend.</p> 
       </div>
     </div>
 
-
-
-
-
-
-
-
-
-
+    <div class="row foot" style="background: #f0f;min-height: 150px;">
+      </div>
+  </div> 
+        
 
     <script>
-      var myDataRef = new Firebase('https://ultimatevacation.firebaseio.com/');
-      var string = $("#robstring").html();
-      var name= "";
-      var authModal = $('#auth-modal').modal( {show: false}); //this cluase hides the modal unless
-      var curchannel= "News";
-      //the user tries to enter a message without being logged in//
-      //check to see if the user is logged in using getAuth fx
-      // Create a callback which logs the current auth state
-      var authData = myDataRef.getAuth();
-      if (authData) {
-        // alert("User " + authData.uid + " is logged in with " + authData.provider);
-        console.log("User " + authData.uid + " is logged in with " + authData.provider);
-        //@TODO: get logged user name
-        if (authData.provider == "password"){
-          myDataRef.child('user').child(authData.uid).once('value', function(snapshot){
-            var userinfo=snapshot.val();
-            for (key in userinfo) {
-              name = userinfo[key].name;
-              $("#mainDisplayLogin").hide();
-              $("#mainDisplayMessages").show();
-            }
-          });
-        }
-        else{
-          name = authData[authData.provider].displayName;
-          $("#mainDisplayLogin").hide();
-          $("#mainDisplayMessages").show();
-        }
-      } else {
-        console.log("User is logged out");
-      }
-      $(document).ready(function() {
-        $("#email-sign-in").click(function(){
-          $(".LoginOptionWindow").hide();
-          $(".LoginEmailWindow").show();  
-        });
-        $("#LoginCancel").click(function(){
-          $(".LoginEmailWindow").hide();  
-          $(".LoginOptionWindow").show();
-        });
-        $("#LoginRegisterButton").click(function() {
-          $(".LoginEmailWindow").hide();
-          $(".main-chat-register").show();
-        });
-        $("#login-window-button").click(function() {
-          $(".main-chat-register").hide();
-          $(".LoginEmailWindow").show();
-        });
-        $("#register-button").click(function() {
-          var registerName = $("#register-name").val();
-          var email = $("#register-email").val();
-          var password = $("#register-password").val();
-          myDataRef.createUser({
-            email    : email,
-            password : password
-          }, function(error, userData) {
-            if (error) {
-              console.log("Error creating user:", error);
-            } else {
-              console.log("Successfully created user account with uid:", userData.uid);
-              var photoinput = document.getElementById('PhotoUpload');
-              var f = photoinput.files[0];
-              var reader = new FileReader();
-              reader.onload = (function(theFile) {
-                return function(e) {
-                  var filePayload = e.target.result;
-                  // Generate a location that can't be guessed using the file's contents and a random number
-                  //var hash = CryptoJS.SHA256(Math.random() + CryptoJS.SHA256(filePayload));
-                  var firebasephoto = new Firebase(myDataRef + '/photos/' + userData.uid + '/filePayload');
-                  // Set the file payload to Firebase and register an onComplete handler to stop the spinner and show the preview
-                  //firebasephoto.set(filePayload, function() { 
-                  myDataRef.child('user').child(userData.uid).push({id:userData.uid, email:email, name:registerName, photo:e.target.result}); 
-                  myDataRef.authWithPassword({
-                    email    : email,
-                    password : password
-                  }, function(error, authData) {
-                    if (error) {
-                      console.log("Login Failed!", error);
-                    } else {
-                      console.log("Authenticated successfully with payload:", authData);
-                      name=registerName;
-                      $("#mainDisplayLogin").hide();
-                      $("#mainDisplayMessages").show();
-                    }
-                  });
-                };
-              })(f);
-        
-              reader.readAsDataURL(f);
-            }
-          });
-        });
-        $("#login-button").click(function() {
-          var email = $("#user_email").val();
-          var password = $("#user_password").val();
-          myDataRef.authWithPassword({
-            email    : email,
-            password : password
-          }, function(error, authData) {
-            if (error) {
-              console.log("Login Failed!", error);
-            } else {
-              console.log("Authenticated successfully with payload:", authData);
-              // console.log (authData.uid);
-              myDataRef.child('user').child(authData.uid).once("value", function(snapshot) {
-                var user = snapshot.val();
-                console.log('The users info', user);
-                for (var key in user) {
-                  console.log('the users id is?', user[key]);
-                  name=user[key].name;
-                  $("#displayname").html(user[key].name);
-                  document.getElementById("displayphoto").src = user[key].photo;
-                } 
-              });            
-              $("#mainDisplayLogin").hide();
-              $("#mainDisplayMessages").show();
-            }
-          });
-        });
-        $('#messageInput').keypress(function (e) {
-          if (e.keyCode == 13) {
-            // alert(name);
-            //check here to see if user is logged in
-            if(!name){
-              console.log('error place');
-              //authModal.modal('show');
-            } else { //don't allow submit unless there is a name!
-              //var name = $('#nameInput').val();
-              var text = $('#messageInput').val();
-              myDataRef.child('messages').child(curchannel).push({name: name, text: text});
-              $('#messageInput').val('');
-            }
-          }
-        });
-        myDataRef.child('messages').child(curchannel).on('child_added', function(snapshot) {
-          var message = snapshot.val();
-          displayChatMessage(message.name, message.text);
-        });
-      });
-      function channel(TheChannel) {
-        curchannel = TheChannel;
-        $('#messagesDiv').html('');
-        myDataRef.child('messages').child(curchannel).off('child_added');
-        myDataRef.child('messages').child(curchannel).on('child_added', function(snapshot) {
-          var message = snapshot.val();
-          displayChatMessage(message.name, message.text);
-        });
-      }
-      function logout() {
-        console.log("logging out");
-        myDataRef.unauth();
-        location.reload();
-      }
-      function login(provider) {
-        console.log("login with ", provider);
-        authModal.modal('hide');
-        myDataRef.authWithOAuthPopup(provider, function(error, authData) {
-          if (error) {
-            console.log("Login Failed!", error);
-          } else {
-            console.log("Authenticated successfully with payload:", authData);
-            //console.log(authData.provider.cachedUserProfile.picture.data.url);
-            //console.log("User " + authData.uid + " is logged in with " + authData.provider);
-            var userId = authData.uid;
-            name = authData[authData.provider].displayName;
-            myDataRef.child('user').child(userId).once("value", function(snapshot) {
-              data = snapshot.val();
-              console.log(data);
-              var ifExists = snapshot.exists(); //a firebase function
-              if (ifExists){
-                console.log ('user is already in the system');
-              } else{
-                myDataRef.child('user').child(userId).push({id: userId, name:name}); 
-              }
-              $("#mainDisplayLogin").hide();
-              $("#mainDisplayMessages").show();
-            });
-          }
-        });
-      }
-      function displayChatMessage(name, text) {
-        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
-      } 
+      document.getElementById('mainDisplayMessages').style.visibility = "visible";
+      
+          $('.Generate').click(function(){
+           $('.button-name').html(
+            $('#user_name').val()
+          ); 
+
+          })
+
+          $('.tierOneName').click(function(){
+            var html=$(this).html();
+            alert(html);
+          })
+
+          $('.Generate').click(function(){
+           $('.button-work').html(
+            $('#user_work').val()
+          ); 
+
+          })
+
+          $('.tierWork').click(function(){
+            var html=$(this).html();
+            alert(html);
+          })
+
+          
+  //         document.getElementById('mainDisplayMessages').style.visibility = "visible";
+  //         var user_name=$('#user_name').val();
+  //         console.log(user_name);
+  //         console.log("this is running");
+  //   var str = document.getElementById("tierOneName").innerHTML;
+  //   var res = str.replace("NAME", document.getElementById('user_name').value);
+  // document.getElementById("tierOneName").innerHTML = res;
+
+  // var str = document.getElementById("optionTwo").innerHTML;
+  //   var res = str.replace("NAME", document.getElementById('user_name').value);
+  // document.getElementById("optionTwo").innerHTML = res;
+
+  // var str = document.getElementById("tierWork").innerHTML;
+  // var res = str.replace("WORK", document.getElementById('user_work').value);
+  // document.getElementById("tierWork").innerHTML = res;
+
+  // var str = document.getElementById("tierOneThree").innerHTML;
+  //   var res = str.replace("NAME", document.getElementById('user_name').value);
+  // document.getElementById("tierOneThree").innerHTML = res;
+//}
+
+  function send (option) {
+    console.log(option);
+    if ('tierOneName'){
+      var msg = document.getElementById("tierOneName").innerHTML;
+      console.log(msg);
+    }
+
+    if ('optionTwo'){
+      var msg = document.getElementById("optionTwo").innerHTML;
+      console.log(msg);
+
+    }
+    if (''){
+
+    }
+    // body...
+  }
+
+  // function displayChatMessage(name, text, image) {
+  // $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
     </script>
   </body>
 </html>

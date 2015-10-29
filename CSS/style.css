@@ -243,5 +243,17 @@ nav a:hover {
 }
 
 .questions {
-	padding-top: 20px;
+	padding-top: 30px;
+	padding-bottom: 20px;
+
+}
+
+.messages {
+	padding-top: 40px;
+	background-color: blue;
+	text-align: center;
+}
+
+.left {
+	float: left;
 }
