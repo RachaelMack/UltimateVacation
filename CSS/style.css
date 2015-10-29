@@ -197,9 +197,16 @@ nav a:hover {
 
 .form-group{
 	display: inline-block;
-	width: 70%;
+	width: 100%;
 
 }
+
+.btn-generate{
+	display: inline-block;
+	width: 100%;
+
+}
+
 .h1 {
   font-family:'celticmd','gaelic', sans-serif;
   font-color: #EBE9D2;
@@ -233,4 +240,8 @@ nav a:hover {
   font-size: 250%;
   text-align: center;
   text-shadow: 4px 4px 3px rgba(0,0,0,0.1)	
+}
+
+.questions {
+	padding-top: 20px;
 }

@@ -22,82 +22,58 @@
 </head>
  
 <body>
-  <NAV>
-    <a href="English">English</a>
-    <a href="http://learngaelic.scot/dictionary/index.jsp?abairt=Type%20here&slang=both&wholeword=false" target='_blank'>Faclair</a>
-    <a href="Cuideachas">Cuideachas</a>
-    <a href="Neach-aithne">Neach-aithne</a>
-  </NAV>
-
-<!-- <section class="English">
-  <h1>Cabadaich - The Chat for Gaels</h1>
-  <h2>For Beginners</h2>
-  <p>Cabadaich means to chat, and now Gaels the world over have a place to chat in Gaelic without all the interference of English prevalent in many social networking sites.  If you are a beginner, it may seem daunting to chat in Gaelic because you are worried that your spelling and grammar are not good enough.  Have no fear, you are in the Gaelic community and there are lots of other Gaels ready to help.</p>
-  <p>Please check out the handy tools to help you get better at writing and reading - ie chatting - in Gaelic.  There is the Facal-faire or dictionary that will link you right to the LearnGaelic.net dictionary, and the Cuideachas section provides some handy sayings that are common for quick retorts.</p>
-  
-  <h2>For Intermediates</h2>
-  <p>You feel quite comfortable in speaking conversational Gaelic and you are getting better in the reading and writing departments, but you still need to add the blas!  Use the Gramar section for discussions about all things grammar-like because seriously, understanding the conjugation of verbs in genative case is not as exciting to everyone as the ceilidh in Glencoe on Friday night.  Let's keep our priorities aligned.</p>
-  
-  <h2>For Advanced</h2>
-  <p>You are a resource for the learners and intermediates, but you also have lots to add to your language and cultural expression toolkit.  Consider adding some original Gaelic poetry or song to the channels for Song and Music or Stories and Poetry.  Have fun.</p>
-</section>
-<section class="Cuideachas">
-  <p> &#9830 Cuimseach math (Pretty good)</p>
-  <p> &#9830 droch-naidheachd (bad news)</p>
-  <p> &#9830 c&#242il &#242s &#249r? (anything new?)</p>
-  <p> &#9830 's math do naidheachd (you’ve got good news)</p>
-</section>
-<section class="Neach-aithne">
-  <a href="mailto:gaelicapptesters@gmail.com">gaelicapptesters@gmail.com</a>
-</section> -->
 
 
-  <div class-"container">
-    <div class="jumbotron">
+  <div class="container">
+  <div class="row head" style="background: #f0f;min-height: 300px;">
+    <p>
+      <p>
+      </div>
+    <div class="col-sm-2 left">
+    </div>
+    <div class="col-sm-8 questions">
+      <div class="form-group">
+            <label class="name" for="user_password">First Name</label>
+            <input class="form-control" id="user_name" name="user[name]" placeholder="Enter First Name" type="text">
+          </div>
 
-      <!-- <h1> f&#224ilte gu</h1>    
-      <h1> Cabadaich</h1> -->
-          <a href="#" data-toggle="tooltip" data-placement="right" title="Welcome to Gaelic Chat!"><font color="#EEFCFC">f&#224ilte gu</font></br> <font color="#09347C">Cabadaich</font></a>
-          <!-- <p><a id="login" class="btn btn-primary btn-lg " href="#" role="button">cl&#224raich a-steach</a>
-          <a id="logout" button type="button" class="btn btn-warning" onclick=logout()>cl&#224raich a-mach</button>
-        </a>
-      </p> -->
+          <div class="form-group">
+            <label class="email optional control-label" for="user_email">Email</label>
+            <input autofocus="autofocus" class="string email optional form-control" id="user_email" name="user[email]" placeholder="Enter email" type="email" value="">
+          </div>
+          <div class="form-group">
+            <label class="password optional control-label" for="user_password">Password</label>
+            <input class="form-control" id="user_password" name="user[password]" placeholder="Enter password" type="password">
+          </div>
+
+          <div class="form-group">
+            <label class="name" for="user_password">First Name</label>
+            <input class="form-control" id="user_name" name="user[name]" placeholder="Enter First Name" type="text">
+          </div>
+
+          <div class="form-group">
+            <label class="email optional control-label" for="user_email">Email</label>
+            <input autofocus="autofocus" class="string email optional form-control" id="user_email" name="user[email]" placeholder="Enter email" type="email" value="">
+          </div>
+          <div class="form-group">
+            <label class="password optional control-label" for="user_password">Password</label>
+            <input class="form-control" id="user_password" name="user[password]" placeholder="Enter password" type="password">
+          </div>
+          <button type="button" class="btn btn btn-generate" id="generateScript">Click for Options</button>
+    </div>
+     <div class="col-sm-2 right">
     </div>
   </div>
+  </div>
 
-  <!-- This is the combined login box attempt -->
+  
+  
 
-  <div id="mainDisplay">
-    <div class="row" id="mainDisplayLogin">
-      <div class="col-xs-5 col-xs-offset-4">
-        <div class="LoginOptionWindow">
-          <h3 class="LoginFormHeader">How Would You Like to Login? </h3>
-          <div class="row">
-            <div class="col-xs-4">
-                <a id="facebook-signin" href="javascript:login('facebook');">
-                  <i id="facebook-signin-btn" class="fa fa-facebook-square fa-5x"></i>
-                  <p>Facebook</p>
-                </a>
-            </div>
+           
 
-            <div class="col-xs-4">
-              <a id="twitter-signin" href="javascript:login('twitter');">
-                <i id="twitter-signin-btn" class="fa fa-twitter-square fa-5x"></i>
-                <p>Truitrich /Twitter</p>
-              </a>
-            </div>
 
-            <div class="col-xs-4">
-              <a id="email-sign-in">
-                <i id="email-signin-btn" class="fa fa-envelope-o fa-5x"></i>
-                <p>email</p>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="LoginEmailWindow" style="display: none;">
-          <div class="form-group">
+        <!-- <div class="LoginEmailWindow" style="display: none;"> -->
+          <!-- <div class="form-group">
             <label class="name" for="user_password">Name</label>
             <input class="form-control" id="user_name" name="user[name]" placeholder="Enter Name" type="text">
           </div>
@@ -107,14 +83,14 @@
               <p>Or, Use your email &amp; password</p>
             <label class="email optional control-label" for="user_email">Email</label>
             <input autofocus="autofocus" class="string email optional form-control" id="user_email" name="user[email]" placeholder="Enter email" type="email" value="">
-          </div>
-        </div>
+          </div> -->
+        <!-- </div>
 
           <div class="form-group">
             <label class="password optional control-label" for="user_password">Password</label>
             <input class="form-control" id="user_password" name="user[password]" placeholder="Enter password" type="password">
-          </div>
-        
+          </div> -->
+        <!-- 
           <input class="btn btn btn-success" name="commit" type="button" id="login-button" value="Sign in">
           <button class="RegisterButton" type="button" id="LoginRegisterButton">Register</button>
           <button class="RegisterButton" type="button" id="LoginCancel">Cancel</button>
@@ -148,7 +124,7 @@
           </div>
         </div>
       </div>
-    </div>  
+    </div>   -->
 
     <div class="main-chat-display">
     <h1><img src="" id="displayphoto" style="height: 40px; width: 40px;" /> <span id="displayname"></span></h1>
