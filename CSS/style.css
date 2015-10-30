@@ -257,3 +257,9 @@ nav a:hover {
 .left {
 	float: left;
 }
+
+.tierOneName {
+	display: inline-block;
+	text-align: center
+	margin: 15px;	
+}

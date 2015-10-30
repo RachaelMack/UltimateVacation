@@ -1,6 +1,10 @@
 <!doctype html>
 <html>
 <head>
+
+  <!-- Twilio -->
+  <script type="text/javascript"
+src="//static.twilio.com/libs/twiliojs/1.2/twilio.min.js"></script>
   <!--FIREBASE -->
   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
   <!-- JQUERY -->    
@@ -41,7 +45,7 @@
           </div>
 
           <div class="form-group">
-            <label class="phone">Place of Work</label>
+            <label class="phone">Phone Number</label>
             <input class="form-control" id="user_phone" name="user[phone]" placeholder="Enter Phone Number" type="text">
           </div>
 
@@ -59,7 +63,7 @@
     
       <div class="col-sm-12 messages">
         <button id="tierOneName" class="tierOneName" onclick="send('tierOneName')">Hey <span class='button-name'>NAME</span>, I know how creepy you've been being to my friend.</button> 
-
+<p></p>
         <button id="optionTwo" onclick="send('optionTwo')">Hey <span class='button-name'>NAME</span>, I know how creepy you've been being to my friend.</p> 
         <p id="tierWork" class="tierWork">I am going to come find you at <span class='button-work'>WORK</span>.</p></button>
 
@@ -73,9 +77,10 @@
         
 
     <script>
-      document.getElementById('mainDisplayMessages').style.visibility = "visible";
+      document.getElementById('mainDisplayMessages').style.visibility = "hidden";
       
           $('.Generate').click(function(){
+            document.getElementById('mainDisplayMessages').style.visibility = "visible";
            $('.button-name').html(
             $('#user_name').val()
           ); 
@@ -99,8 +104,22 @@
             alert(html);
           })
 
+          // Twilio Credentials 
+var accountSid = 'AC9db1436cc0bed10c7c0f9b4c89652f0c'; 
+var authToken = '[853d5e71396beec84c879e7ccd19e690]'; 
+ 
+//require the Twilio module and create a REST client 
+var client = require('twilio')(accountSid, authToken); 
+ 
+client.messages.create({ 
+    to: "+19029790036", 
+    from: "+14158141829", 
+    body: "Hey Jenny! Good luck on the bar exam!", 
+    mediaUrl: "http://farm2.static.flickr.com/1075/1404618563_3ed9a44a3a.jpg",  
+}, function(err, message) { 
+    console.log(message.sid); 
+});
           
-  //         document.getElementById('mainDisplayMessages').style.visibility = "visible";
   //         var user_name=$('#user_name').val();
   //         console.log(user_name);
   //         console.log("this is running");
@@ -121,23 +140,23 @@
   // document.getElementById("tierOneThree").innerHTML = res;
 //}
 
-  function send (option) {
-    console.log(option);
-    if ('tierOneName'){
-      var msg = document.getElementById("tierOneName").innerHTML;
-      console.log(msg);
-    }
+  // function send (option) {
+  //   console.log(option);
+  //   if ('tierOneName'){
+  //     var msg = document.getElementById("tierOneName").innerHTML;
+  //     console.log(msg);
+  //   }
 
-    if ('optionTwo'){
-      var msg = document.getElementById("optionTwo").innerHTML;
-      console.log(msg);
+  //   if ('optionTwo'){
+  //     var msg = document.getElementById("optionTwo").innerHTML;
+  //     console.log(msg);
 
-    }
-    if (''){
+  //   }
+  //   if (''){
 
-    }
-    // body...
-  }
+  //   }
+  //   // body...
+  // }
 
   // function displayChatMessage(name, text, image) {
   // $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
